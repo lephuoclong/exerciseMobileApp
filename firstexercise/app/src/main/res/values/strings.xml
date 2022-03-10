@@ -1,3 +1,6 @@
 <resources>
     <string name="app_name">firstexercise</string>
+    <string name="hub">HUB</string>
+    <string name="food">FOOD</string>
+    <string name="todo">TODO</string>
 </resources>

@@ -19,6 +19,9 @@
             android:name=".features.signIn.SignActivity"
             android:exported="false" />
         <activity
+            android:name=".features.login.LoginActivity"
+            android:exported="false" />
+        <activity
             android:name=".features.welcome.WelcomeActivity"
             android:exported="false" />
         <activity
