@@ -10,7 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Firstexercise" >
         <activity
-            android:name=".features.verificationCode.VerifyActivity"
+            android:name=".MainActivity"
             android:exported="false" />
         <activity
             android:name=".features.onboardings.OnboardOneActivity"
@@ -25,7 +25,7 @@
             android:name=".features.welcome.WelcomeActivity"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name=".features.verificationCode.VerifyActivity"
             android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
