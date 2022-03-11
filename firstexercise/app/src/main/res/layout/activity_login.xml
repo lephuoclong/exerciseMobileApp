@@ -22,8 +22,8 @@
         android:layout_marginTop="-99dp"
         android:layout_marginLeft="-5dp"
         app:srcCompat="@drawable/ic_elip" />
-    <ImageView
-        android:id="@+id/imageView2"
+    <ImageButton
+        android:id="@+id/imgBtnComeback"
         android:layout_width="40.13dp"
         android:layout_height="38dp"
         android:visibility="visible"
@@ -46,59 +46,59 @@
             android:id="@+id/imageView5"
             android:layout_width="181dp"
             android:layout_height="181dp"
-            android:layout_marginLeft="210dp"
             android:layout_marginTop="-130dp"
-            app:srcCompat="@drawable/ic_hinhtron"
-
-            />
+            app:srcCompat="@drawable/ic_hinhtron" />
 
         <TextView
-            android:layout_width="247dp"
+            android:layout_width="match_parent"
             android:layout_height="40dp"
-            android:layout_gravity="left"
-            android:layout_marginLeft="26dp"
+            android:layout_marginLeft="20dp"
             android:layout_marginTop="180dp"
+            android:layout_marginRight="20dp"
             android:text="Login"
             android:textColor="#000"
             android:textSize="32dp" />
 
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="left"
-            android:layout_marginLeft="28.51dp"
+            android:layout_marginLeft="20dp"
             android:layout_marginTop="15dp"
+            android:layout_marginRight="20dp"
             android:layout_marginBottom="15dp"
             android:background="@color/white"
             android:text="E_mail"
             android:textSize="20dp" />
 
         <EditText
-
-            android:layout_width="wrap_content"
+            android:id="@+id/txtUsername"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="left"
-            android:layout_marginLeft="28.51dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="20dp"
             android:layout_marginBottom="20dp"
+            android:background="@drawable/custom_edit_text"
             android:ems="100"
             android:hint="Your email or phone"
             android:textSize="20dp" />
 
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="left"
-            android:layout_marginLeft="28.51dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
             android:layout_marginBottom="15dp"
             android:text="Password"
             android:textSize="20dp" />
 
         <EditText
+            android:id="@+id/txtPassword"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="left"
-            android:layout_marginLeft="28.51dp"
-            android:ems="15"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/custom_edit_text"
             android:hint="Password"
             android:inputType="textPassword"
             android:textSize="20dp" />
@@ -114,6 +114,7 @@
             android:textSize="15dp" />
 
         <Button
+            android:id="@+id/btnLogin"
             android:layout_width="248dp"
             android:layout_height="60dp"
             android:layout_marginBottom="5dp"
@@ -123,22 +124,28 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginHorizontal="50dp"
+            android:layout_marginTop="20dp"
             android:gravity="center"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:weightSum="10">
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_weight="7"
+                android:gravity="center"
                 android:text="Don't have an account?"
                 android:textColor="@color/black" />
 
-            <EditText
-                android:layout_width="wrap_content"
+            <Button
+                android:id="@+id/btnGotoSignup"
+                android:layout_width="148dp"
                 android:layout_height="wrap_content"
-                android:layout_marginRight="5dp"
+                android:background="@color/noBackGround"
+                android:gravity="start"
                 android:text="Sign up"
-                android:textColor="#FF5722"
-                android:textSize="15dp" />
+                android:textColor="@color/primary_color" />
         </LinearLayout>
 
         <TextView

@@ -12,4 +12,5 @@
     <color name="primary_color">#FE724C</color>
     <color name="subText_color">#9796A1</color>
     <color name="low_color">#474755</color>
+    <color name="noBackGround">#00000000</color>
 </resources>
