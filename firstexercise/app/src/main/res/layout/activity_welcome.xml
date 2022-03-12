@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/welcome_bg"
+    android:backgroundTint="@null"
     tools:context=".features.welcome.WelcomeActivity">
 
     <ImageView
@@ -181,11 +182,11 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:height="54dp"
-            android:background="@drawable/btn_facebook"
+            android:background="@drawable/btn_outline"
             android:fontFamily="@font/sofia_pro"
             android:text="@string/start_email_phone"
             android:textAllCaps="false"
-            app:backgroundTint="#4DFFFFFF"
+            app:backgroundTint="@null"
             app:iconSize="5dp"
             app:iconTintMode="multiply" />
 
