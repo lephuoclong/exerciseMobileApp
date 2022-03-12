@@ -4,10 +4,12 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Window
+import android.view.inputmethod.InputMethodManager
 import android.widget.Button
 import android.widget.EditText
 import android.widget.ImageButton
 import android.widget.Toast
+import androidx.constraintlayout.widget.ConstraintLayout
 import com.example.firstexercise.R
 import com.example.firstexercise.features.signIn.SignActivity
 import com.example.firstexercise.features.verificationCode.VerifyActivity
@@ -17,6 +19,7 @@ class LoginActivity : AppCompatActivity() {
     private var txtUsername:EditText?=null
     private var txtPassword:EditText?=null
     private var btnLogin:Button?=null
+    private var containerLayout: ConstraintLayout?=null
     private var btnGotoSignUp:Button?=null
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -40,6 +43,13 @@ class LoginActivity : AppCompatActivity() {
             handleLogin()
         }
 
+        containerLayout?.setOnTouchListener { v, event ->
+            val imm: InputMethodManager =
+                getSystemService(INPUT_METHOD_SERVICE) as InputMethodManager
+            imm.hideSoftInputFromWindow(currentFocus!!.windowToken, 0)
+            true
+        }
+
     }
 
     private fun handleLogin() {
@@ -61,5 +71,6 @@ class LoginActivity : AppCompatActivity() {
         txtPassword = findViewById(R.id.txtPassword)
         btnLogin = findViewById(R.id.btnLogin)
         btnGotoSignUp = findViewById(R.id.btnGotoSignup)
+        containerLayout = findViewById(R.id.containerLayout)
     }
 }
