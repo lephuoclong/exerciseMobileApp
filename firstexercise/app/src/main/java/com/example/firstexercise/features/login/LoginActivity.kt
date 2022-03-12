@@ -11,6 +11,7 @@ import android.widget.ImageButton
 import android.widget.Toast
 import androidx.constraintlayout.widget.ConstraintLayout
 import com.example.firstexercise.R
+import com.example.firstexercise.features.onboardings.OnboardOneActivity
 import com.example.firstexercise.features.signIn.SignActivity
 import com.example.firstexercise.features.verificationCode.VerifyActivity
 
@@ -58,7 +59,7 @@ class LoginActivity : AppCompatActivity() {
 
         if(username && password) {
             Toast.makeText(this@LoginActivity, "Login Success!", Toast.LENGTH_SHORT).show()
-            val intent = Intent(this@LoginActivity, VerifyActivity::class.java)
+            val intent = Intent(this@LoginActivity, OnboardOneActivity::class.java)
             startActivity(intent)
         }else{
             Toast.makeText(this@LoginActivity, "Username or password incorrect!", Toast.LENGTH_SHORT).show()
