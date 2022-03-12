@@ -13,34 +13,61 @@ import com.example.firstexercise.features.login.LoginActivity
 import com.example.firstexercise.features.signIn.SignActivity
 
 class WelcomeActivity : AppCompatActivity() {
+    private var signIn :TextView? = null
+    private var signUpFaceBook :Button? = null
+    private var signUpGoogle :Button? = null
+    private var signUpEmailOrPhone :Button? = null
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         supportActionBar?.hide();
         setContentView(R.layout.activity_welcome)
-        val signIn  = findViewById<TextView>(R.id.welcome_signin)
-        val mSignIn = signIn.text
+
+        init()
+
+        underlineSignUp()
+
+        signIn?.setOnClickListener {
+            goToLoginActivity()
+        }
+
+
+        signUpFaceBook?.setOnClickListener{
+            goToSignUpActivity()
+        }
+
+        signUpGoogle?.setOnClickListener{
+            goToSignUpActivity()
+        }
+
+
+        signUpEmailOrPhone?.setOnClickListener {
+            goToSignUpActivity()
+        }
+    }
+
+    private fun underlineSignUp(){
+        val mSignIn = signIn!!.text
         val uSignIn = SpannableString(mSignIn)
         uSignIn.setSpan(UnderlineSpan(), 0, uSignIn.length, 0 )
-        signIn.text = uSignIn
-        signIn.setOnClickListener {
-            val intentLoginActivity = Intent(this, LoginActivity::class.java)
-            startActivity(intentLoginActivity)
-        }
+        signIn!!.text = uSignIn
+    }
+    private fun goToLoginActivity(){
+        val intentLoginActivity = Intent(this, LoginActivity::class.java)
+        startActivity(intentLoginActivity)
+    }
 
+    private fun goToSignUpActivity(){
+        val intentSignUpActivity = Intent(this, SignActivity::class.java)
+        startActivity(intentSignUpActivity)
+    }
 
-        val signUpFaceBook = findViewById<Button>(R.id.welcome_btn_facebook)
-        signUpFaceBook.setOnClickListener{
-            val intentSignUpActivity = Intent(this, SignActivity::class.java)
-            startActivity(intentSignUpActivity)
-        }
-
-        val signUpGoogle = findViewById<Button>(R.id.welcome_btn_google)
-        signUpGoogle.setOnClickListener{
-            val intentSignUpActivity = Intent(this, SignActivity::class.java)
-            startActivity(intentSignUpActivity)
-        }
-
+    private fun init(){
+        signIn = findViewById(R.id.welcome_signin)
+        signUpFaceBook = findViewById(R.id.welcome_btn_facebook)
+        signUpGoogle = findViewById(R.id.welcome_btn_google)
+        signUpEmailOrPhone = findViewById(R.id.welcome_startemailphone)
 
     }
 //    click to login -> redirect to LoginLayout
