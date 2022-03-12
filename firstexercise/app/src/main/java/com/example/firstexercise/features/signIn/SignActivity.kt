@@ -1,19 +1,21 @@
 package com.example.firstexercise.features.signIn
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.method.HideReturnsTransformationMethod
 import android.text.method.PasswordTransformationMethod
 import android.view.Window
+import android.view.inputmethod.InputMethodManager
 import android.widget.Button
 import android.widget.EditText
 import android.widget.ImageView
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
+import androidx.constraintlayout.widget.ConstraintLayout
 import com.example.firstexercise.R
 import com.example.firstexercise.features.login.LoginActivity
-import com.example.firstexercise.features.onboardings.OnboardOneActivity
 import com.example.firstexercise.features.verificationCode.VerifyActivity
+
 
 class SignActivity : AppCompatActivity() {
     private var editTextFullname :EditText?=null
@@ -22,6 +24,7 @@ class SignActivity : AppCompatActivity() {
     private var imageViewVisible:ImageView?=null
     private var btnSignUp:Button?=null
     private var btnComeBackWelcome:Button?=null
+    private var containerLayout:ConstraintLayout?=null
     private var showPass = false
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -41,6 +44,13 @@ class SignActivity : AppCompatActivity() {
 
         btnComeBackWelcome?.setOnClickListener {
             finishActivity()
+        }
+        
+        containerLayout?.setOnTouchListener { v, event ->
+            val imm: InputMethodManager =
+                getSystemService(INPUT_METHOD_SERVICE) as InputMethodManager
+            imm.hideSoftInputFromWindow(currentFocus!!.windowToken, 0)
+            true
         }
     }
 
@@ -94,5 +104,8 @@ class SignActivity : AppCompatActivity() {
         imageViewVisible = findViewById(R.id.imageViewShowHidePassword)
         btnSignUp = findViewById(R.id.buttonSignUp)
         btnComeBackWelcome = findViewById(R.id.btnComeBackWelcome)
+        containerLayout = findViewById(R.id.containerLayout)
     }
 }
+
+

@@ -1,9 +1,110 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".features.verificationCode.VerifyActivity">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="96dp"
+        android:layout_height="96dp"
+        android:layout_gravity="left"
+        android:layout_marginTop="-10dp"
+        android:layout_marginLeft="-40dp"
+        app:srcCompat="@drawable/ic_hinhbanh"
+        />
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="165dp"
+        android:layout_height="165dp"
+        android:layout_marginTop="-159dp"
+        android:layout_marginLeft="1dp"
+        app:srcCompat="@drawable/ic_elip" />
+
+    <ImageView
+        android:layout_marginStart="300dp"
+        android:id="@+id/imageView5"
+        android:layout_width="181dp"
+        android:layout_height="181dp"
+        android:layout_marginTop="-180dp"
+        android:layout_marginRight="-190dp"
+        app:srcCompat="@drawable/ic_hinhtron" />
+
+    <ImageButton
+        android:id="@+id/imgBtnComeback"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_gravity="left"
+        android:layout_marginLeft="28.51dp"
+        android:layout_marginTop="-50dp"
+        android:background="@drawable/custom_btn_back"
+        android:visibility="visible"
+        app:cardCornerRadius="12dp"
+        app:srcCompat="@drawable/ic_quaylai"
+        tools:ignore="SpeakableTextPresentCheck" />
+    <TextView
+        android:layout_width="296dp"
+        android:layout_height="40dp"
+        android:layout_marginLeft="26dp"
+        android:layout_marginTop="100dp"
+        android:text="Vefification Code"
+        android:textColor="@color/black"
+        android:textFontWeight="600"
+        android:textSize="30dp"
+        android:textStyle="normal" />
+
+    <TextView
+        android:layout_width="289dp"
+        android:layout_height="38dp"
+        android:layout_marginLeft="26dp"
+        android:layout_marginTop="12dp"
+        android:text="@string/descriptionVerifyCode"
+
+        />
+
+    <com.wynsbin.vciv.VerificationCodeInputView
+
+        android:id="@+id/vciv_code1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="31dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:vciv_et_background="@drawable/custom_verifi_not_focus"
+        app:vciv_et_cursor_color="@color/primary_color"
+        app:vciv_et_foucs_background="@drawable/custom_verifi_focus"
+        app:vciv_et_height="65dp"
+        app:vciv_et_inputType="number"
+        app:vciv_et_number="4"
+        app:vciv_et_spacing="20dp"
+        app:vciv_et_text_color="@android:color/black"
+        app:vciv_et_text_size="27sp"
+        app:vciv_et_underline_default_color="@color/white"
+        app:vciv_et_underline_focus_color="@color/primary_color"
+        app:vciv_et_underline_height="2dp"
+        app:vciv_et_underline_show="false"
+        app:vciv_et_width="65dp" />
+
+    <LinearLayout
+        android:layout_width="267dp"
+        android:layout_height="16dp"
+        android:layout_marginTop="32dp"
+        android:textSize="16dp"
+        android:layout_gravity="center"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="I don’t recevie a code!" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" Please resend"
+            android:textColor="@color/primary_color" />
+    </LinearLayout>
+</LinearLayout>

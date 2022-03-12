@@ -13,4 +13,5 @@
     <string name="start_email_phone">Start with email or phone</string>
     <string name="welcome_info">Your favourite foods delivered fast at your door.</string>
     <string name="sign_in_with">sign in with</string>
+    <string name="descriptionVerifyCode">Please type the verification code sent to prelookstudio@gmail.com</string>
 </resources>
