@@ -7,3 +7,5 @@ Version 1:
 	- LoginActivity and SignActivity: + wrong: toast message error
 						+ correct: toast message success, then redirect to onboarding(HomeActivity)
 	- HomeActivity: display HomeLayout
+	
+	link video : https://www.youtube.com/watch?v=cwUAKYkXRKk
